@@ -10,7 +10,7 @@ Assuming that you are now familiar witht he Coppersmith method, let me describe 
 This is often a tedious task. The simple algorithm presented in the sage file is helpful.
 
 ## Using the ALgorithm
-Suppose we want to find integers $r_1, ..., r_l$ bounded as $r_i \leq X_i$, given the polynomials $g_1,. . ., g_l \in \mathbb{Z}[ x_1,..., x_l ]$ such that they have $r=(r_1,... ,r_l)$ as common root modulo some known integer $N$. For $i=1,... , l$ we  have: $$ g_i (r_1, ... r_l) = 0 \hspace{4pt} mod \hspace{2pt} N $$
+Suppose we want to find integers $r_1, ..., r_l$ bounded as $r_i \leq X_i$, given the polynomials $g_1,. . ., g_l \in \mathbb{Z}[ x_1,..., x_l ]$ such that they have $r=(r_1,... ,r_l)$ as common root modulo some known integer $N$. For $i=1,... , l$ we  have: $$g_i (r_1, ... r_l) = 0 \hspace{4pt} mod \hspace{2pt} N$$
 Following the Coppersmith method, We set the parameter $m=2$ and consider finitely many shift polynomials, say $f_1, . . . f_n$ with the root $r$ modulo $N^m$.  Giving these polynomials as the input to the above algorithm, we will get the maximal subset $\{f_{i_1}, f_{i_2}, . . ., f_{i_l}\}$ of  $\{f_1, f_2, . . ., f_m\}$ such that the corresponding matrix is triangular. Repeating the procedure for $m=3, 4,$, etc, we may see a pattern for the choice of shift polynomials that can be generalized for any given $m$. This, in turn, will enable us to calculate the asymptotic bound for $m \xrightarrow{} \infty $.
 
 It must be noted that this algorithm does not guarantee the optimality of the choice of shift polynomials. After removing some polynomials from the algorithm output, we may get a better bound. The analysis of optimality depends on the initial polynomials of the particular problem at hand. 
